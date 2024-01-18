@@ -1,4 +1,6 @@
 import pandas as pd 
+from unidecode import unidecode
+
 
 
 def rename_players_column(df):
@@ -32,7 +34,8 @@ def process_name(input_str):
     Captains and assistant captains are noted on cap friendly but we will remove this.
     Reverse first and last name to be consistent with hockey reference data
     '''
-    clean_str = input_str.replace('"A"', '').replace('"C"', '')
+    drop_captaincy_string = input_str.replace('"A"', '').replace('"C"', '')
+    clean_str = unidecode(drop_captaincy_string)
     parts = clean_str.split(',')
     if len(parts) == 2:
         last, first = parts
