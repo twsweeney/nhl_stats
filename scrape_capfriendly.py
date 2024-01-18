@@ -1,17 +1,25 @@
 import pandas as pd 
 
-team_str = 'bruins'
-
 
 def rename_players_column(df):
+    '''
+    Cap friendly differently names columns by position so This normalized by changing them all to "Player"
+    '''
     df['Player'] =  df[df.columns[0]]
     df = df.drop(columns=df.columns[0], inplace=True)
 
 def drop_total_row(df):
+    '''
+    Cap friendly has a total row for each position which is not relevant to us so it is dropped
+    '''
     index = df.shape[0] - 1 
     df = df.drop(index, inplace=True)
 
 def parse_salaries(df):
+    '''
+    The parsing of the HTML puts all of the future salaries into one column, so this grabs only the first columns
+    salary, IE the current salary which is what we are looking for 
+    '''
     df['Salary'] = df['2023-24'].str.split('$').str.get(1)
     df['Salary'] = df['Salary'].dropna().str.replace('[\\$,]','', regex=True).astype(int)
  
@@ -20,6 +28,10 @@ def parse_salaries(df):
 
 
 def process_name(input_str):
+    '''
+    Captains and assistant captains are noted on cap friendly but we will remove this.
+    Reverse first and last name to be consistent with hockey reference data
+    '''
     clean_str = input_str.replace('"A"', '').replace('"C"', '')
     parts = clean_str.split(',')
     if len(parts) == 2:
@@ -73,12 +85,19 @@ def main():
 
     
     for index, team_str in enumerate(league):
+        # base case
         if index == 0:
             league_df = scrape_team(team_str)
         else:
             temp_df = scrape_team(team_str)
             league_df = pd.concat([league_df, temp_df])
+        
+        if index % 4 == 0:
+            print(f'{index/len(league) * 100}% complete')
+
     league_df.to_csv('./data/capfriendly.csv')
+
+    print('Success :)')
 
 
 
