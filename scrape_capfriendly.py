@@ -64,13 +64,21 @@ def scrape_team(team_str):
 
 def main():
     Atlantic  = ['bruins', 'sabres', 'redwings', 'panthers', 'canadiens', 'senators', 'lightning', 'mapleleafs']
-    for index, team_str in enumerate(Atlantic):
+    Metro = ['hurricanes', 'bluejackets', 'devils', 'penguins', 'capitals', 'flyers', 'rangers', 'islanders']
+    Central = ['coyotes', 'blackhawks', 'avalanche', 'stars', 'wild', 'predators', 'blues', 'jets']
+    Pacific = ['ducks', 'flames', 'oilers', 'kings', 'sharks', 'kraken', 'canucks', 'goldenknights']
+
+
+    league = Atlantic + Metro + Central + Pacific
+
+    
+    for index, team_str in enumerate(league):
         if index == 0:
             league_df = scrape_team(team_str)
         else:
             temp_df = scrape_team(team_str)
             league_df = pd.concat([league_df, temp_df])
-    league_df.to_csv('./data/capfriendly_Atlantic.csv')
+    league_df.to_csv('./data/capfriendly.csv')
 
 
 
