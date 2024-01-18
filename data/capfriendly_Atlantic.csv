@@ -1,0 +1,182 @@
+,specific_pos,Cap%,Player,Salary
+0,RW,13.5, David  Pastrnak,11250000.0
+1,LW,7.3, Brad  Marchand,6125000.0
+2,"C, RW",6.3, Charlie Coyle,5250000.0
+3,"LW, C",5.7, Pavel Zacha,4750000.0
+4,"RW, LW",4.8, Jake DeBrusk,4000000.0
+5,"LW, RW",2.8, Trent Frederic,2300000.0
+6,"C, RW",2.4, Morgan Geekie,2000000.0
+7,"LW, RW",1.2, James van Riemsdyk,1000000.0
+8,C,1.1, John Beecher,925000.0
+9,C,1.0, Matthew Poitras,870000.0
+10,"C, RW",1.0, Oskar Steen,800000.0
+11,"LW, RW",0.9, Jakub Lauko,787500.0
+12,"C, LW",0.9, Jesper Boqvist,775000.0
+13,"LW, RW",0.9, Danton Heinen,775000.0
+14,RD,11.4, Charlie  McAvoy,9500000.0
+15,LD,7.8, Hampus Lindholm,6500000.0
+16,LD,4.4, Matt Grzelcyk,3687500.0
+17,RD,1.3, Kevin Shattenkirk,1050000.0
+18,LD,1.1, Mason Lohrei,925000.0
+19,LD,0.9, Parker Wotherspoon,775000.0
+20,G,6.0, Linus Ullmark,5000000.0
+21,G,4.2, Jeremy Swayman,3475000.0
+0,C,8.6, Tage Thompson,7142857.0
+1,"C, LW",8.5, Dylan Cozens,7100000.0
+2,"RW, LW",5.7, Victor Olofsson,4750000.0
+3,"RW, LW",5.7, Alex Tuch,4750000.0
+4,"LW, RW",3.6, Jordan Greenway,3000000.0
+5,"LW, C",3.0, Casey Mittelstadt,2500000.0
+6,"LW, C",3.0, Zemgus Girgensons,2500000.0
+7,RW,3.0, Kyle  Okposo,2500000.0
+8,LW,1.9, Eric Robinson,1600000.0
+9,LW,1.1, Zach Benson,950000.0
+10,"C, LW",1.0, Peyton Krebs,863333.0
+11,"RW, LW",1.0, Jack Quinn,863333.0
+12,"LW, RW",1.0, John-Jason Peterka,855833.0
+13,LD/RD,7.2, Rasmus Dahlin,6000000.0
+14,LD,5.1, Mattias Samuelsson,4285714.0
+15,RD,4.0, Connor Clifton,3333333.0
+16,RD,3.9, Erik Johnson,3250000.0
+17,RD,3.0, Henri Jokiharju,2500000.0
+18,LD,1.1, Ryan Johnson,925000.0
+19,LD/RD,1.1, Owen Power,916667.0
+20,G,1.1, Devon Levi,925000.0
+21,G,1.0, Ukko-Pekka Luukkonen,837500.0
+0,C,10.4, Dylan  Larkin,8700000.0
+1,"LW, RW",9.4, Alex DeBrincat,7875000.0
+2,"C, LW, RW",6.7, Andrew Copp,5625000.0
+3,"C, RW",6.1, J.T. Compher,5100000.0
+4,"RW, LW",5.7, David Perron,4750000.0
+5,LW,4.8, Robby Fabbri,4000000.0
+6,RW,3.3, Patrick Kane,2750000.0
+7,"LW, RW",2.4, Klim Kostin,2000000.0
+8,"RW, LW",2.4, Daniel Sprong,2000000.0
+9,"LW, C",1.7, Michael Rasmussen,1460000.0
+10,"RW, LW",1.3, Christian Fischer,1125000.0
+11,"RW, LW",1.1, Lucas Raymond,925000.0
+12,C,1.0, Joseph Veleno,825000.0
+13,LD/RD,5.7, Ben Chiarot,4750000.0
+14,LD/RD,4.9, Shayne Gostisbehere,4125000.0
+15,RD,4.1, Justin Holl,3400000.0
+16,LD,4.1, Jake Walman,3400000.0
+17,LD,3.6, Olli Määttä,3000000.0
+18,RD,2.8, Jeff Petry,2343750.0
+19,RD,1.0, Moritz Seider,863333.0
+20,G,1.8, James Reimer,1500000.0
+21,G,1.1, Alex Lyon,900000.0
+0,C,12.0, Aleksander  Barkov,10000000.0
+1,RW,11.4, Matthew Tkachuk,9500000.0
+2,RW,7.8, Sam Reinhart,6500000.0
+3,C,5.3, Sam Bennett,4425000.0
+4,LW,5.0, Carter Verhaeghe,4166667.0
+5,"LW, C",3.6, Evan Rodrigues,3000000.0
+6,"LW, C",1.8, Eetu Luostarinen,1500000.0
+7,"C, LW, RW",1.3, Steven Lorentz,1050000.0
+8,"C, RW",1.2, Kevin Stenlund,1000000.0
+9,"C, LW",1.1, Anton Lundell,925000.0
+10,"LW, RW",1.0, Jonah Gadjovich,810000.0
+11,LW,1.0, Ryan Lomberg,800000.0
+12,"LW, C",0.9, Rasmus Asplund,775000.0
+13,RW,0.9, William Lockwood,775000.0
+14,RD,9.0, Aaron  Ekblad,7500000.0
+15,RD,4.2, Brandon Montour,3500000.0
+16,LD,3.2, Gustav Forsling,2666667.0
+17,LD,3.0, Niko Mikkola,2500000.0
+18,LD,2.7, Oliver Ekman-Larsson,2250000.0
+19,LD/RD,1.2, Dmitry Kulikov,1000000.0
+20,LD/RD,1.1, Josh Mahura,925000.0
+21,G,12.0, Sergei Bobrovsky,10000000.0
+22,G,1.3, Anthony Stolarz,1100000.0
+0,C,9.4, Nick  Suzuki,7875000.0
+1,"LW, RW",9.4, Cole Caufield,7850000.0
+2,"RW, LW",7.8, Brendan  Gallagher,6500000.0
+3,"RW, LW",6.6, Josh Anderson,5500000.0
+4,"RW, LW",4.1, Joel Armia,3400000.0
+5,"C, LW, RW",2.4, Sean Monahan,1985000.0
+6,C,2.0, Jake Evans,1700000.0
+7,"LW, RW",1.3, Rafaël Harvey-Pinard,1100000.0
+8,"RW, LW",1.1, Juraj Slafkovsky,950000.0
+9,"LW, RW",1.0, Joshua Roy,835000.0
+10,"LW, RW",1.0, Michael Pezzetta,812500.0
+11,C,0.9, Mitchell Stephens,775000.0
+12,"RW, LW",0.9, Jesse Ylönen,775000.0
+13,LD,5.8, Michael  Matheson,4875000.0
+14,RD,4.2, David Savard,3500000.0
+15,LD/RD,1.7, Jordan Harris,1400000.0
+16,RD,1.1, Justin Barron,925000.0
+17,LD,1.0, Jayden Struble,867500.0
+18,LD,1.0, Kaiden Guhle,863333.0
+19,RD,0.9, Johnathan Kovacevic,766667.0
+20,G,4.6, Jake Allen,3850000.0
+21,G,1.2, Samuel Montembeault,1000000.0
+22,G,1.1, Cayden Primeau,890000.0
+0,C,10.0, Tim Stützle,8350000.0
+1,LW,9.8, Brady  Tkachuk,8205714.0
+2,C,9.5, Joshua Norris,7950000.0
+3,"RW, C",7.8, Claude  Giroux,6500000.0
+4,RW,6.0, Vladimir Tarasenko,5000000.0
+5,RW,6.0, Drake Batherson,4975000.0
+6,"LW, RW",3.5, Mathieu Joseph,2950000.0
+7,"LW, RW",3.0, Dominik Kubalik,2500000.0
+8,"C, LW",1.0, Ridly Greig,863333.0
+9,"C, RW",1.0, Mark Kastelic,835000.0
+10,C,0.9, Rourke Chartier,775000.0
+11,"RW, C",0.9, Zack MacEwen,775000.0
+12,"LW, C",0.9, Parker Kelly,762500.0
+13,C,, Shane Pinto,
+14,LD,9.6, Thomas  Chabot,8000000.0
+15,LD/RD,5.5, Jakob Chychrun,4600000.0
+16,RD,5.5, Artem Zub,4600000.0
+17,"LD/RD, LW",2.4, Erik Brännström,2000000.0
+18,RD,1.3, Travis Hamonic,1100000.0
+19,LD,1.1, Jake Sanderson,925000.0
+20,RD,1.0, Jacob Bernard-Docker,805000.0
+21,G,4.8, Joonas Korpisalo,4000000.0
+22,G,1.1, Mads Søgaard,925000.0
+0,RW,11.4, Nikita  Kucherov,9500000.0
+1,"C, RW",11.4, Brayden Point,9500000.0
+2,"LW, C",10.2, Steven  Stamkos,8500000.0
+3,"C, LW",7.5, Anthony Cirelli,6250000.0
+4,"C, LW",3.8, Nicholas Paul,3150000.0
+5,"LW, RW",2.4, Conor Sheary,2000000.0
+6,LW,1.8, Brandon Hagel,1500000.0
+7,RW,1.0, Waltteri Merelä,870000.0
+8,"RW, C",1.0, Michael Eyssimont,800000.0
+9,"C, RW, LW",1.0, Luke Glendening,800000.0
+10,"LW, RW",1.0, Tyler Motte,800000.0
+11,"RW, LW",0.9, Austin Watson,776665.0
+12,"RW, LW",0.9, Alex Barré-Boulet,758333.0
+13,LD,9.4, Victor  Hedman,7875000.0
+14,RD,6.2, Erik Cernak,5200000.0
+15,RD,1.7, Philippe Myers,1400000.0
+16,RD,1.3, Nick Perbix,1125000.0
+17,LD,1.0, Emil Martinsen Lilleberg,870000.0
+18,RD,1.0, Maxwell Crozier,867500.0
+19,LD/RD,0.9, Calvin De Haan,775000.0
+20,RD,0.9, Darren Raddysh,762500.0
+21,G,11.4, Andrei Vasilevskiy,9500000.0
+22,G,0.9, Jonas Johansson,775000.0
+0,C,13.9, Auston  Matthews,11640250.0
+1,"C, LW",13.2, John  Tavares,11000000.0
+2,RW,13.1, Mitchell  Marner,10903000.0
+3,RW,8.3, William Nylander,6962366.0
+4,"LW, RW",6.6, Tyler Bertuzzi,5500000.0
+5,"C, RW",3.6, Max Domi,3000000.0
+6,C,2.9, David Kämpf,2400000.0
+7,"RW, C, LW",2.5, Calle Järnkrok,2100000.0
+8,"LW, RW",1.1, Matthew Knies,925000.0
+9,"C, LW",1.0, Pontus Holmberg,800000.0
+10,"LW, RW",1.0, Nicholas Robertson,796667.0
+11,"LW, RW",0.9, Noah Gregor,775000.0
+12,"RW, LW",0.9, Bobby McMann,762500.0
+13,LD,9.0, Morgan  Rielly,7500000.0
+14,LD/RD,6.0, TJ Brodie,5000000.0
+15,LD/RD,2.4, Jake McCabe,2000000.0
+16,RD,1.7, Timothy Liljegren,1400000.0
+17,RD,1.3, Conor Timmins,1100000.0
+18,LD,1.0, Mark Giordano,800000.0
+19,LD,0.9, Simon Benoit,775000.0
+20,LD/RD,0.9, William Lagesson,775000.0
+21,G,4.3, Ilya Samsonov,3550000.0
+22,G,1.0, Martin Jones,875000.0
