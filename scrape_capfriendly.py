@@ -36,7 +36,8 @@ def process_name(input_str):
     parts = clean_str.split(',')
     if len(parts) == 2:
         last, first = parts
-        flipped = f'{first} {last}'
+        first_clean = first.split(' ')[1]
+        flipped = f'{first_clean} {last}'
         return flipped
     else:
         print(f'Invalid input string: {input_str}')
@@ -83,7 +84,6 @@ def main():
 
     league = Atlantic + Metro + Central + Pacific
 
-    
     for index, team_str in enumerate(league):
         # base case
         if index == 0:

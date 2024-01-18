@@ -1,6 +1,19 @@
 import pandas as pd
 import numpy as np 
 import time
+from unidecode import unidecode
+
+
+
+def process_name(input_str):
+    '''
+    Captains and assistant captains are noted on cap friendly but we will remove this.
+    Reverse first and last name to be consistent with hockey reference data
+    '''
+    clean_str = input_str.replace('(C)', '').strip()
+
+
+    return clean_str
 
 
 def get_team_df(team:str) -> pd.DataFrame:
@@ -14,17 +27,34 @@ def get_team_df(team:str) -> pd.DataFrame:
 
     tables = pd.read_html(url, match=combined_pattern)
 
-    scoring_df = tables[0]
-    roster_df = tables[1]
+    roster_df = tables[0]
+    scoring_df = tables[1]
+    
 
 
 
     # Remove the header above all of the column names
-    roster_df.columns = roster_df.columns.get_level_values(1)
+    scoring_df.columns = scoring_df.columns.get_level_values(1)
+
+
+    # need to match player strings. In scoring df it uses C and A where in roster it doestn 
+
+
+
+
 
     # Drop Repeat Columns and merge the dataframes
     roster_initial_drop = ['Age', 'Pos']
     roster_df = roster_df.drop(columns=roster_initial_drop)
+
+    # We first need to remove the "(C)" and normalize names
+    # This fixes "Pastrňák" != "Pastrnak"
+    roster_df['Player'] = roster_df['Player'].apply(process_name)
+    roster_df['Player'] = roster_df['Player'].apply(lambda x: unidecode(x))
+    scoring_df['Player'] = scoring_df['Player'].apply(lambda x: unidecode(x))
+
+
+
     merged_df = pd.merge(scoring_df, roster_df, on='Player', how='inner')
 
     # drop irrelevant data
@@ -41,6 +71,7 @@ def get_team_df(team:str) -> pd.DataFrame:
     merged_df['Exp'] = merged_df['Exp'].replace('R', 0).astype(int)
 
     merged_df['Team'] = team
+
 
     return merged_df
 
@@ -73,9 +104,6 @@ def main():
         print(f'{division_dict['label']} scrape complete. Waiting 60 seconds now')
         time.sleep(60)
         
-
-
-
 
 
 if  __name__ == '__main__':

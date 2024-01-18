@@ -25,32 +25,29 @@ def main():
     cap_drop = ['Unnamed: 0']
     cap_df = cap_df.drop(columns=cap_drop)
 
-    test_index = 9
-    print(f'HR: {hr_df['Player'][test_index]}')
-    print(f'CF: {cap_df['Player'][test_index]}')
+  
 
 
 
 
-
-    # complete_df = pd.merge(hr_df, cap_df, how='outer', on='Player')
-
-
-    # current_datetime =  datetime.now()
-    # current_date_str = str(current_datetime.date()).replace('-','_')
+    complete_df = pd.merge(hr_df, cap_df, how='outer', on='Player')
 
 
-
-    # output_directory = './data/processed/'
-    # output_filename = current_date_str + '_clean_player_data.csv'
-    # output_path = output_directory + output_filename
+    current_datetime =  datetime.now()
+    current_date_str = str(current_datetime.date()).replace('-','_')
 
 
-    # if not os.path.exists(output_directory):
-    #     os.makedirs(output_directory)
-    #     complete_df.to_csv(output_path)
-    # else:
-    #     complete_df.to_csv(output_path)
+
+    output_directory = './data/processed/'
+    output_filename = current_date_str + '_clean_player_data.csv'
+    output_path = output_directory + output_filename
+
+
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+        complete_df.to_csv(output_path)
+    else:
+        complete_df.to_csv(output_path)
 
 
 if __name__ == '__main__':
