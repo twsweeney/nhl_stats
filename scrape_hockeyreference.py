@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np 
+import time
 
 
 def get_team_df(team:str) -> pd.DataFrame:
@@ -53,15 +54,25 @@ def main():
     Central = ['WPG', 'COL', 'DAL', 'NSH', 'ARI', 'STL', 'MIN', 'CHI']
     Pacific = ['VAN', 'VEG', 'LAK', 'EDM', 'CGY', 'SEA', 'ANA', 'SJS']
 
-    teams = Atlantic
 
-    for i in range(len(teams)):
-        if i == 0:
-            league_df = get_team_df(teams[i])
-        else:
-            temp_df = get_team_df(teams[i])
-            league_df = pd.concat([league_df, temp_df])
-    league_df.to_csv('./data/Atlantic_League_Data_1_18_2024.csv')
+    league = [{'file_path':'./data/hr_atlantic_data.csv', 'teams':Atlantic, 'label':'Atlantic'},
+              {'file_path':'./data/hr_metro_data.csv', 'teams':Metro, 'label':'Metro'},
+              {'file_path':'./data/hr_central_data.csv', 'teams':Central, 'label':'Central'},
+              {'file_path':'./data/hr_pacific_data.csv', 'teams':Pacific, 'label':'Pacific'}]
+
+    for division_dict in league:
+        print(f'Starting scrape on: {division_dict['label']}')
+        teams = division_dict['teams']
+        for i in range(len(teams)):
+            if i == 0:
+                league_df = get_team_df(teams[i])
+            else:
+                temp_df = get_team_df(teams[i])
+                league_df = pd.concat([league_df, temp_df])
+        league_df.to_csv(division_dict['file_path'])
+        print(f'{division_dict['label']} scrape complete. Waiting 60 seconds now')
+        time.sleep(60)
+        
 
 
 
