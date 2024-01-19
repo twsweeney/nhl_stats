@@ -91,7 +91,7 @@ def main():
               {'file_path':'./data/hr_central_data.csv', 'teams':Central, 'label':'Central'},
               {'file_path':'./data/hr_pacific_data.csv', 'teams':Pacific, 'label':'Pacific'}]
 
-    for division_dict in league:
+    for index, division_dict in enumerate(league):
         print(f'Starting scrape on: {division_dict['label']}')
         teams = division_dict['teams']
         for i in range(len(teams)):
@@ -102,7 +102,12 @@ def main():
                 league_df = pd.concat([league_df, temp_df])
         league_df.to_csv(division_dict['file_path'])
         print(f'{division_dict['label']} scrape complete. Waiting 60 seconds now')
-        time.sleep(60)
+        if index != 3:
+            time.sleep(60)
+        else:
+            print('Complete!')
+
+        
         
 
 

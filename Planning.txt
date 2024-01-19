@@ -1,0 +1,7 @@
+Current idea is to create a model that will predict the salary of players based on their statistics. 
+
+Can then compare predicted salary to actual salary
+
+I want to separate these predictions by position
+
+a defenseman and center should not be evaluated on the same features
