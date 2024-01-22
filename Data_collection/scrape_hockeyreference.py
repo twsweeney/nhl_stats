@@ -80,16 +80,18 @@ def get_team_df(team:str) -> pd.DataFrame:
 
 
 def main():
+    # Each division must be seprately scraped to avoid rate limits on hockeyreference 
+
     Atlantic = ['BOS', 'FLA', 'TOR', 'DET', 'TBL', 'MTL', 'BUF', 'OTT']
     Metro = ['NYR', 'PHI', 'CAR', 'PIT', 'WSH', 'NYI', 'NJD', 'CBJ']
     Central = ['WPG', 'COL', 'DAL', 'NSH', 'ARI', 'STL', 'MIN', 'CHI']
     Pacific = ['VAN', 'VEG', 'LAK', 'EDM', 'CGY', 'SEA', 'ANA', 'SJS']
 
 
-    league = [{'file_path':'./data/hr_atlantic_data.csv', 'teams':Atlantic, 'label':'Atlantic'},
-              {'file_path':'./data/hr_metro_data.csv', 'teams':Metro, 'label':'Metro'},
-              {'file_path':'./data/hr_central_data.csv', 'teams':Central, 'label':'Central'},
-              {'file_path':'./data/hr_pacific_data.csv', 'teams':Pacific, 'label':'Pacific'}]
+    league = [{'file_path':'../data/hr_atlantic_data.csv', 'teams':Atlantic, 'label':'Atlantic'},
+              {'file_path':'../data/hr_metro_data.csv', 'teams':Metro, 'label':'Metro'},
+              {'file_path':'../data/hr_central_data.csv', 'teams':Central, 'label':'Central'},
+              {'file_path':'../data/hr_pacific_data.csv', 'teams':Pacific, 'label':'Pacific'}]
 
     for index, division_dict in enumerate(league):
         print(f'Starting scrape on: {division_dict['label']}')
