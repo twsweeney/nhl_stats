@@ -98,7 +98,7 @@ def main():
         if index % 4 == 0:
             print(f'{index/len(league) * 100}% complete')
 
-    league_df.to_csv('../data/capfriendly.csv')
+    league_df.to_csv('data/temp_scrapes/capfriendly.csv')
 
     print('Success :)')
 
