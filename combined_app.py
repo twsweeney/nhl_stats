@@ -53,6 +53,7 @@ player_data_df = player_data_df[player_data_df['Pos'] != 'G']
 drop_columns = ['Team', 'specific_pos', 'Cap%', 'Salary','S/C', 'Ht', 'Wt', 'TOI', 'FO%']
 player_data_df = player_data_df.drop(columns=drop_columns)
 player_data_df = player_data_df.dropna()
+
 def prep_atoi(atoi_string):
     list = atoi_string.split(':')
     minutes = int(list[0])
@@ -68,11 +69,12 @@ player_data_df['ATOI'] = player_data_df['ATOI'].apply(prep_atoi)
 df = player_data_df.merge(model_output_df, on='Player', how='inner')
 
 
-
 dropdown_features = [ 'Age', 'GP', 'G', 'A', 'PTS', '+/-', 'PIM',  'ATOI', 'BLK', 'HIT',  'Exp']
 
 
-initial_range = (np.min(df['difference']), np.max(df['difference']))
+# initial_range = (np.min(df['difference']), np.max(df['difference']))
+initial_range = (0,100)
+
 
 
 # Initialize the Dash app
@@ -83,7 +85,7 @@ app.layout = html.Div([
     dcc.Dropdown(
             id='feature-dropdown',
             options=[{'label': feat, 'value': feat} for feat in dropdown_features],
-            value='A'),
+            value='Age'),
 
     html.Div([
     html.H3(f'Select a range of values')]),  
@@ -100,8 +102,19 @@ app.layout = html.Div([
     Input('feature-dropdown', 'value')
 )
 def update_slider_options(feature):
+    '''
+    This updates the slider options by taking in the selected feature from the dropdown. 
+    The min and max value are then set as the ends of the slider
+    '''
+    # When the app starts the feature may be set to none, causing issues with the slider appearing
+    # This sets the slider to some default values in the case that there is no feature assigned on startup
+    if feature is None:
+        return 0,1,0.1
+    
+    # Floor used to round to whole numbers.
     min_val = np.floor(np.min(df[feature]))
     max_val = np.floor(np.max(df[feature]))
+    # If there are many entries the slider becomes very cramped, this increases the step value
     if max_val > 100:
         step_val = 3
     else:
@@ -132,9 +145,10 @@ def update_figure(feature, range):
     # fig.update_layout(transition_duration=500)
 
     mean_val = np.mean(filtered_df['difference'])
+    median_val = np.median(filtered_df['difference'])
     std_val = np.std(filtered_df['difference'])
 
-    mean_std_text = f"Mean: {mean_val:.2f}, Standard Deviation: {std_val:.2f}"
+    mean_std_text = f"Mean: {mean_val:.2f}, Median: {median_val:.2f}, Standard Deviation: {std_val:.2f}"
 
 
     return fig, mean_std_text
